@@ -2,33 +2,37 @@
 @import '_mixins';
 
 ::selection {
-	color: 		var(--background);
+	color: var(--background);
 	background: var(--secondary);
 }
 
 html {
+	@include transition(250ms);
+
 	font-size: 16px;
 	font-family: var(--font-sans);
 
 	color: var(--primary-dim);
 	background: var(--background);
-	
+
 	text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+
+	scroll-behavior: smooth;
 }
 
 #__next {
 	width: 100%;
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 img {
 	border-radius: .5rem;
 	//width: 100%;
-	filter: brightness( var(--brightness-low) );
+	filter: brightness(var(--brightness-low));
 
 	&:hover {
-		filter: brightness( var(--brightness-high) );
+		filter: brightness(var(--brightness-high));
 	}
 }
 
@@ -43,6 +47,7 @@ button.button {
 	margin-right: 1rem;
 
 	@include transition(750ms);
+
 	&:hover {
 		@include transition(750ms);
 	}
@@ -60,7 +65,7 @@ h2 {
 	font-size: var(--font-xl);
 	font-family: var(--font-sans);
 	font-weight: 700;
-    letter-spacing: -.05rem;
+	letter-spacing: -.05rem;
 }
 
 h3 {
@@ -117,7 +122,7 @@ a {
 		}
 	}
 
-	
+
 
 	[data-prefix="far"][data-icon="arrow-up-right-from-square"] {
 		height: .75rem;
@@ -137,6 +142,7 @@ a {
 .list {
 	list-style: disc;
 	margin-left: 1.5rem;
+
 	li {
 		&::marker {
 			content: normal;
@@ -144,9 +150,9 @@ a {
 	}
 }
 
-.leaveSite {
+.seeMore {
 	&:after {
-		content: "↗";
+		content: "↓";
 		position: relative;
 		font-size: inherit;
 		line-height: 0;
@@ -166,18 +172,18 @@ a {
 
 #gradient-canvas {
 	position: absolute;
-    z-index: -1;
+	z-index: -1;
 	opacity: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(180deg);
-    aspect-ratio: auto;
-    --gradient-color-1: var( --mesh-color-1 );
-	--gradient-color-2: var( --mesh-color-2 );
-	--gradient-color-3: var( --mesh-color-3 );
-	--gradient-color-4: var( --mesh-color-4 );
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: rotate(180deg);
+	aspect-ratio: auto;
+	--gradient-color-1: var(--mesh-color-1);
+	--gradient-color-2: var(--mesh-color-2);
+	--gradient-color-3: var(--mesh-color-3);
+	--gradient-color-4: var(--mesh-color-4);
 }
 
 .highlight {
@@ -186,12 +192,10 @@ a {
 
 	width: fit-content;
 	background: var(--bar-gradient);
-	--bar-gradient: 
-		linear-gradient( 
-			90deg, 
-			var(--looking-bg-1) 0%, 
-			var(--looking-bg-2) 100%
-		);
+	--bar-gradient:
+		linear-gradient(90deg,
+			var(--looking-bg-1) 0%,
+			var(--looking-bg-2) 100%);
 
 	-webkit-background-clip: text;
 	background-clip: text;

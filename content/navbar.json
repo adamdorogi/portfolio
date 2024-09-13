@@ -1,18 +1,18 @@
 [
 	{
-		"url": "/",
-		"title": "About Me"
+		"url": "#about",
+		"title": "About"
 	},
 	{
-		"url": "/case-studies",
-		"title": "Case Studies"
-	},
-	{
-		"url": "/articles",
-		"title": "Articles"
-	},
-	{
-		"url": "/projects",
+		"url": "#projects",
 		"title": "Projects"
+	},
+	{
+		"url": "#services",
+		"title": "Services"
+	},
+	{
+		"url": "#contact",
+		"title": "Contact"
 	}
 ]

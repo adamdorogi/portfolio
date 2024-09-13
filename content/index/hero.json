@@ -1,32 +1,36 @@
 {
 	"intro": {
-		"start": "const Andrew = ( name, passion ) =>",
-		"end": "Hello, my name is",
-		"speed": 60,
-		"deletionSpeed": 80,
+		"greetings": [
+			"Hello! My name is",
+			"The name's Dorogi.",
+			"Knock knock... It's just me,",
+			"Howdy, partner! The name's",
+			"Ahoy, matey! It is I,",
+			"What's cookin', good lookin'? I'm",
+			"GOOOOOD MORNING, VIETNAM! This is",
+			"Hello, sunshine! They call me",
+			"I've been expecting you... The name's",
+			"How you doin'? I go by",
+			"'Ello, mate. It's me,",
+			"Still here..? Let's chat! The name's"
+		],
+		"speed": 40,
+		"deletionSpeed": 60,
 		"wrapper": "h2",
-		"startDelay": 1000,
-		"deleteDelay": 3000,
-		"restartDelay": 12000
+		"delay": 3000
 	},
-
 	"header": {
-		"name": "Andrew Nelson.",
-		"usp": "I design and build meaningful experiences."
+		"name": "Adam Dorogi.",
+		"usp": "I create beautiful and innovative software."
 	},
-
-	"paragraph": "I am a digital polymath — a constantly evolving digital creator driven by a passion for lifelong learning and the desire to leave a lasting impact.",
-
 	"buttons": {
 		"primary": {
 			"title": "Contact Me",
-			"url": "",
-			"leaveSite": false
+			"url": ""
 		},
 		"secondary": {
-			"title": "LinkedIn",
-			"url": "",
-			"leaveSite": "true"
+			"title": "See more",
+			"url": ""
 		}
 	}
 }

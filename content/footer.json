@@ -1,50 +1,33 @@
 {
-	"acknowledgments": [
-		{ 
-			"person": "Jihad Hassan - Marketing Director",
-			"link": "",
-			"note": "Thank you for all the advice and feedback."
-		},
-		{ 
-			"person": "Colorpong - Artist",
-			"link": "ttps://www.youworkforthem.com/designer/536/colorpong?aff=1115",
-			"note": "Checkout their amazing vector illustrations."
-		},
-		{ 
-			"person": "Brittany Chiang - Software Engineer",
-			"link": "https://brittanychiang.com/",
-			"note": "A major inspiration to create an open source theme."
-		},
-		{ 
-			"person": "Vercel - Platform",
-			"link": "https://vercel.com/docs",
-			"note": "Host your own Next.js project for free!"
-		}
-	],
-
 	"links": [
-		{ 
-			"person": "YWFT Creative Marketplace",
-			"link": "https://www.youworkforthem.com/?aff=1115",
-			"note": "Best in class creative assets."
+		{
+			"person": "About Me",
+			"link": "#about",
+			"note": "Get familiar"
+		},
+		{
+			"person": "Featured Projects",
+			"link": "#projects",
+			"note": "Dig into my universe"
+		},
+		{
+			"person": "Services",
+			"link": "#services",
+			"note": "Launch your vision"
+		},
+		{
+			"person": "Contact Me",
+			"link": "#contact",
+			"note": "Got a problem to solve?"
 		}
 	],
-
 	"social": [
 		{
-			"url": "https://medium.com/@--andrewnelson",
-			"icon": "medium"
-		},
-		{
-			"url": "https://dev.to/andrewnelson",
-			"icon": "dev"
-		},
-		{
-			"url": "https://www.linkedin.com/in/--andrewnelson/",
+			"url": "https://linkedin.com/in/adamdorogi",
 			"icon": "linkedin"
 		},
 		{
-			"url": "https://github.com/atlamors",
+			"url": "https://github.com/adamdorogi",
 			"icon": "github"
 		}
 	]

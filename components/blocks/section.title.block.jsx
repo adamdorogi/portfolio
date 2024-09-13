@@ -1,8 +1,6 @@
-
-import Container from '../structure/container';
-
 // Section scss
 import section from '../../styles/blocks/section.title.module.scss'
+import Badges from '../utils/badge.list.util'
 
 /**
  * Section header component
@@ -10,14 +8,15 @@ import section from '../../styles/blocks/section.title.module.scss'
  * @param {string} * strings for header
  * @returns 
  */
-export default function SectionTitle({ preTitle, title, subTitle }) {
+export default function SectionTitle({ preTitle, title, subTitle, badges }) {
 	return (
 		<>
-		<div className={`${section.title}`}>
-			<h4>{preTitle}</h4>
-			<h2>{title}</h2>
-			<p className="subtitle">{subTitle}</p>
-		</div>
+			<div className={`${section.title}`}>
+				<h4>{preTitle}</h4>
+				<h2>{title}</h2>
+				<p>{subTitle}</p>
+				{badges && <span style={{ margin: 'auto' }}><Badges list={badges} /></span>}
+			</div>
 		</>
 	)
 

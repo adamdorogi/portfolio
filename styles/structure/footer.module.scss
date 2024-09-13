@@ -4,8 +4,8 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	
-	> div {
+
+	>div {
 		display: flex;
 		flex-direction: column;
 		gap: var(--size-3x);
@@ -33,7 +33,7 @@
 		$gap: 2rem;
 		display: flex;
 		flex-direction: row;
-		//justify-content: space-between;
+		justify-content: space-between;
 		gap: $gap;
 
 		svg {
@@ -45,11 +45,11 @@
 		ul {
 
 			&:nth-of-type(1) {
-				width: calc( var(--grid-32) * 12 - $gap );
+				width: calc(var(--grid-32) * 12 - $gap );
 			}
-			
+
 			&:nth-of-type(2) {
-				width: calc( var(--grid-32) * 12 - $gap );
+				width: calc(var(--grid-32) * 12 - $gap );
 			}
 
 			li {
@@ -74,14 +74,14 @@
 
 		Get it working to get cool hover effect on steal this theme section!
 		**/
-		.svg-inline--fa.fa-code-branch  {
-			margin-left: 1rem;
-			
-			.fa-secondary {
-				fill: #a371f7;
-				opacity: 1;
-			}
+	.svg-inline--fa.fa-code-branch {
+		margin-left: 1rem;
+
+		.fa-secondary {
+			fill: #a371f7;
+			opacity: 1;
 		}
+	}
 
 	.github {
 
@@ -92,7 +92,7 @@
 			letter-spacing: -.01rem;
 		}
 
-		> a {
+		>a {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -104,9 +104,9 @@
 			&:hover {
 				filter: grayscale(0);
 
-				
+
 			}
-	
+
 			ul {
 				display: flex;
 				flex-direction: row;
@@ -122,7 +122,7 @@
 			flex-direction: column-reverse;
 			text-align: center;
 			gap: 3rem;
-			
+
 			ul {
 				width: 100% !important; // :nth-of-type specifity is bad
 			}

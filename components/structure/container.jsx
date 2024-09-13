@@ -18,7 +18,7 @@ export default function Container({ classProp, spacing, children }) {
 
 	const _class = classProp ? classProp : '';
 
-	return ( 
+	return (
 		<div className={`${css.readingWidth} ${_class} ${Spacing(spacing)}`}>
 			{children}
 		</div>

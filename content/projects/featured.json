@@ -1,53 +1,112 @@
 [
 	{
-		"project": "My Supply Co.",
-		"url": "https://mysupplyco.com",
-		"repo": "Private",
-		"descriptionTitle": "D2C & B2B ecommerce site and blog",
-		"description": "with elegant solutions for a complex codebase and customer journey.",
-		"imageOptions": [
+		"project": "IBM Security Verify",
+		"url": "https://apps.apple.com/us/app/ibm-security-verify/id1162190392",
+		"tags": [
+			{
+				"key": "apple",
+				"name": "iOS"
+			},
+			{
+				"key": "android",
+				"name": "Android"
+			}
 		],
+		"descriptionTitle": "A multi-factor authentication app",
+		"description": "with stunning user experience and next-level security.",
+		"imageOptions": [],
 		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/03.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+			{
+				"key": "mock-stack",
+				"hover": "right",
+				"alt": "IBM Security Verify app running on an iPhone",
+				"h": "1200",
+				"w": "556",
+				"url": "/img/featured_mock_stack/03.png"
+			},
+			{
+				"key": "mock-stack",
+				"hover": "right",
+				"alt": "iPhone shadow",
+				"h": "1200",
+				"w": "556",
+				"url": "/img/featured_mock_stack/02.png"
+			},
+			{
+				"key": "mock-stack",
+				"hover": "left",
+				"alt": "IBM Security Verify app running on an iPhone",
+				"h": "1200",
+				"w": "556",
+				"url": "/img/featured_mock_stack/01.png"
+			}
 		],
 		"stack": [
-			{ "key": "php", 		"name": "PHP", 			"type": "devicon" },
-			{ "key": "mysql", 		"name": "mySQL", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "jquery", 		"name": "jQuery", 		"type": "devicon" },
-			{ "key": "woocommerce", "name": "WooCommerce", 	"type": "devicon" },
-			{ "key": "wordpress",	"name": "Wordpress", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" }
+			{
+				"key": "shield-halved",
+				"name": "Security-driven experience",
+				"type": "fad"
+			},
+			{
+				"key": "paintbrush-pencil",
+				"name": "Customizable theme",
+				"type": "fad"
+			},
+			{
+				"key": "mobile",
+				"name": "Native iOS and Android apps",
+				"type": "fad"
+			}
 		]
 	},
 	{
-		"project": "andrewnelson.net",
-		"url": "https://github.com/atlamors/portfolio",
-		"repo": "Public",
-		"descriptionTitle": "An open source portfolio",
-		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
+		"project": "Strongr",
+		"url": "https://figma.com/design/49bLlUPssBOkyK2FjWzB9q/Mobile-UI",
+		"tags": [
+			{
+				"key": "figma",
+				"name": "Figma"
+			}
+		],
+		"descriptionTitle": "A fitness app prototype",
+		"description": "with a gorgeous design and intuitive flow.",
 		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
+			{
+				"key": "size",
+				"value": "large"
+			}
 		],
 		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+			{
+				"key": "portfolio",
+				"hover": "left",
+				"alt": "Strongr app running on an iPhone",
+				"h": "797",
+				"w": "556",
+				"url": "/img/featured_mock_single.png"
+			}
 		],
 		"stack": [
-			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
-			{ "key": "react", 		"name": "React", 		"type": "devicon" },
-			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
+			{
+				"key": "cube",
+				"name": "Pixel-perfect design",
+				"type": "fad"
+			},
+			{
+				"key": "sparkles",
+				"name": "Super clean interface",
+				"type": "fad"
+			},
+			{
+				"key": "bars",
+				"name": "Fluid navigation",
+				"type": "fad"
+			},
+			{
+				"key": "circle-half-stroke",
+				"name": "Light and dark mode",
+				"type": "fad"
+			}
 		]
 	}
 ]

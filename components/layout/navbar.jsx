@@ -1,29 +1,27 @@
 import { useEffect, useState } from 'react'
-import { useCallback } from 'react'
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import Link from 'next/link'
 import ThemeMode from '../utils/theme.util'
 
-import settings from '../../content/_settings.json'
-import content  from '../../content/navbar.json'
+import content from '../../content/navbar.json'
 import css from '../../styles/structure/navbar.module.scss'
 
 export default function Navbar() {
 
 	const router = useRouter()
 
-	const [ menuState, menuToggle ] = useState()
+	const [menuState, menuToggle] = useState()
 
-	useEffect( () => {
+	useEffect(() => {
 		menuToggle(false)
-	}, [] )
+	}, [])
 
-	useEffect( () => {
+	useEffect(() => {
 		class RouteEvents {
 
 			constructor() {
 				console.log(
-					'%c☰  Navigation Router Events Loaded', 
+					'%c☰  Navigation Router Events Loaded',
 					'background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; '
 				)
 				this.addEventListeners()
@@ -47,50 +45,50 @@ export default function Navbar() {
 		return () => {
 			routeEvents.removeEventListeners()
 		}
-	}, [router.events] )
+	}, [router.events])
 
-	useEffect( () => {
+	useEffect(() => {
 
 		class ScrollEvents {
 
 			constructor() {
 				console.log(
-					'%c▼  Navigation Scroll Events Loaded', 
+					'%c▼  Navigation Scroll Events Loaded',
 					'background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; '
 				)
 
-				window.sticky		= {}
-				window.sticky.nav	= document.querySelector(`nav`)
+				window.sticky = {}
+				window.sticky.nav = document.querySelector(`nav`)
 
 				this.addEventListeners()
 			}
 
 			addEventListeners() {
-				if ( window.sticky.nav ) {
+				if (window.sticky.nav) {
 					window.addEventListener('DOMContentLoaded', this.maybeHideNav, false)
 					document.addEventListener('scroll', this.maybeHideNav, false)
 				}
 			}
 
 			removeEventListeners() {
-				if ( window.sticky.nav ) {
+				if (window.sticky.nav) {
 					window.removeEventListener('DOMContentLoaded', this.maybeHideNav, false)
 					document.removeEventListener('scroll', this.maybeHideNav, false)
 				}
 			}
 
-			getPosition( e = null, top = true ) {
+			getPosition(e = null, top = true) {
 				let offset
 
-				if ( !e ) return
+				if (!e) return
 
-				if ( top ) {
+				if (top) {
 					offset = e.getBoundingClientRect().top + document.documentElement.scrollTop - window.sticky.nav.at
 					return offset
 				} else {
 					offset = e.getBoundingClientRect().bottom + document.documentElement.scrollTop - window.sticky.nav.at
 					return offset
-				}	
+				}
 			}
 
 			maybeHideNav() {
@@ -100,15 +98,15 @@ export default function Navbar() {
 				 * 
 				 * Add or remove hidden class from filter menu
 				 */
-				const nC 		= window.sticky.nav.classList
+				const nC = window.sticky.nav.classList
 				// const hero 		= document.querySelector('main > div:first-of-type')
 				// const hiddenAt 	= ( hero ) ? hero.getBoundingClientRect().bottom + window.scrollY : ( window.innerHeight / 2 )
-				const hiddenAt	= ( window.innerHeight / 2 )
+				const hiddenAt = (window.innerHeight / 2)
 
-				if ( window.scrollY > this.lastY && window.scrollY > hiddenAt && ! nC.contains( css.hidden ) ) {
-					nC.add( css.hidden )
-				} else if ( window.scrollY < this.lastY && nC.contains( css.hidden ) ) {
-					nC.remove( css.hidden )
+				if (window.scrollY > this.lastY && window.scrollY > hiddenAt && !nC.contains(css.hidden)) {
+					nC.add(css.hidden)
+				} else if (window.scrollY < this.lastY && nC.contains(css.hidden)) {
+					nC.remove(css.hidden)
 				}
 
 				/**
@@ -123,19 +121,19 @@ export default function Navbar() {
 		return () => {
 			scrollEvents.removeEventListeners()
 		}
-	}, [] )
+	}, [])
 
 	const toggleMenu = () => {
-		let bool = ! menuState
+		let bool = !menuState
 		menuToggle(bool)
 	}
 
 	return (
-		<nav id="Navbar" className={css.container}>
+		<nav className={css.container}>
 			<ul className={css.menu}>
 				<li className={css.menuHeader}>
-					<Link className={css.logo} href="/"  >
-						{settings.name}
+					<Link className={css.logo} href="#">
+						<span className="highlight">/</span>Adam Dorogi
 					</Link>
 					<button onClick={toggleMenu} className={css.mobileToggle} data-open={menuState}>
 						<div>
@@ -147,13 +145,13 @@ export default function Navbar() {
 				<li data-open={menuState} className={css.menuContent}>
 					<ul>
 						{
-						content.map( ({ url, title }, index) => {
-							return (
-								<li key={index}>
-									<Link href={url}>{title}</Link>
-								</li>
-							)
-						})	
+							content.map(({ url, title }, index) => {
+								return (
+									<li key={index}>
+										<Link href={url}>{title}</Link>
+									</li>
+								)
+							})
 						}
 						<li>
 							<ThemeMode />

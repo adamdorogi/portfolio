@@ -1,0 +1,93 @@
+[
+	{
+		"project": "Websites",
+		"tags": [],
+		"descriptionTitle": "Launch next-generation websites",
+		"description": "with incredible performance.",
+		"imageOptions": [],
+		"images": [
+			{
+				"key": "portfolio",
+				"hover": "left",
+				"alt": "Cryb website running on a MacBook Air",
+				"h": "506",
+				"w": "556",
+				"url": "/img/services_mock_single.png"
+			}
+		],
+		"stack": [
+			{
+				"key": "palette",
+				"name": "Phenomenal designs",
+				"type": "fad"
+			},
+			{
+				"key": "browser",
+				"name": "Unique single-page apps",
+				"type": "fad"
+			},
+			{
+				"key": "layer-group",
+				"name": "Powerful full-stack apps",
+				"type": "fad"
+			},
+			{
+				"key": "cloud-check",
+				"name": "Robust hosting",
+				"type": "fad"
+			}
+		]
+	},
+	{
+		"project": "Mobile apps",
+		"tags": [],
+		"descriptionTitle": "Release radical mobile apps",
+		"description": "with limitless potential.",
+		"imageOptions": [
+			{
+				"key": "size",
+				"value": "large"
+			}
+		],
+		"images": [
+			{
+				"key": "mock-stack",
+				"hover": "left",
+				"h": "1025",
+				"w": "556",
+				"url": "/img/services_mock_stack/01.png"
+			},
+			{
+				"key": "mock-stack",
+				"hover": "left",
+				"h": "1025",
+				"w": "556",
+				"url": "/img/services_mock_stack/02.png"
+			},
+			{
+				"key": "mock-stack",
+				"hover": "right",
+				"h": "1025",
+				"w": "556",
+				"url": "/img/services_mock_stack/03.png"
+			}
+		],
+		"stack": [
+			{
+				"key": "paint-roller",
+				"name": "Immersive user interface",
+				"type": "fad"
+			},
+			{
+				"key": "swords",
+				"name": "Reimagined cross-platform apps",
+				"type": "fad"
+			},
+			{
+				"key": "store",
+				"name": "Streamlined publishing",
+				"type": "fad"
+			}
+		]
+	}
+]

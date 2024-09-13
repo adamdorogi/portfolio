@@ -6,21 +6,21 @@ describe('Hero section parts', () => {
 
 	it('renders main heading', () => {
 		render(<Hero />)
-		
+
 		const heading = screen.getByRole('heading', {
-			name: /Andrew Nelson\./i,
+			name: /Adam Dorogi\./i,
 		})
-		
+
 		expect(heading).toBeInTheDocument()
 	})
 
 	it('renders sub heading', () => {
 		render(<Hero />)
-		
+
 		const heading = screen.getByRole('heading', {
 			name: /I design and build meaningful experiences\./i,
 		})
-		
+
 		expect(heading).toBeInTheDocument()
 	})
 

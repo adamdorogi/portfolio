@@ -22,8 +22,9 @@ import "@fontsource/inter/800.css"
 import '../node_modules/devicon/devicon.min.css'
 
 // Global css
-import '../styles/css/variables.css'
-import '../styles/css/global.css'
+// import '../styles/scss/variables.scss'
+import '../styles/scss/global.scss'
+import Head from 'next/head';
 
 /**
  * _app.jsx
@@ -35,13 +36,16 @@ import '../styles/css/global.css'
 export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
-		<LazyMotion features={domAnimation}>
-			<Layout>
-				<Component {...pageProps} />
-				<SetGridGap />
-				<Analytics />
-			</Layout>
-		</LazyMotion>
+			<Head>
+				<title>Software Development | Adam Dorogi</title>
+			</Head>
+			<LazyMotion features={domAnimation}>
+				<Layout>
+					<Component {...pageProps} />
+					<SetGridGap />
+					<Analytics />
+				</Layout>
+			</LazyMotion>
 		</>
 	)
 }

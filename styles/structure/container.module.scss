@@ -6,7 +6,7 @@
 }
 
 .readingWidth {
-	width: 100%;
+	width: calc(100% - 4rem);
 	max-width: var(--reading-width);
 	margin-left: auto;
 	margin-right: auto;

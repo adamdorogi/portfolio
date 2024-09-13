@@ -3,34 +3,34 @@
 //global.module.scss
 .section {
 	border-bottom: 1px solid var(--primary-dark);
-	
+
 	max-height: 1440px;
 	height: 100vh;
 	justify-content: center;
-	
-	> .container {
+
+	>.container {
 		height: fit-content;
 	}
-	
+
 	.preHeader {
 		color: var(--secondary);
-		font-family: var(--font-accent);
+		font-family: var(--font-code);
 		font-size: 1.2rem;
 		font-weight: 400;
 		margin: 1rem 0;
 	}
-	
+
 	.header {
 		color: var(--primary-bright);
 		font-family: var(--font-sans);
 		font-size: 5rem;
 		margin: 0;
 	}
-	
+
 	.primaryDim {
 		color: var(--primary-dim);
 	}
-	
+
 	.primaryBright {
 		color: var(--primary);
 	}
@@ -46,6 +46,7 @@
 		gap: .5rem;
 		flex-wrap: wrap;
 		height: 1rem;
+
 		img {
 			height: 16px;
 			width: fit-content;
@@ -57,13 +58,16 @@
 		.preHeader {
 			font-size: 1rem;
 		}
+
 		.header {
 			font-size: 2.9rem;
 		}
+
 		.tempBright {
 			width: 100%;
 			padding-right: 1rem;
 		}
+
 		button {
 			font-size: .875rem;
 			padding: 0.75rem 2rem;
@@ -77,14 +81,14 @@
 	--hero-gradient-bg-2: var(--neon-1-2);
 	--hero-gradient-bg-3: var(--neon-2-1);
 	--hero-gradient-bg-4: var(--neon-2-2);
-	
+
 	position: absolute;
 	pointer-events: none;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	
+
 	.svg_background {
 		position: absolute;
 		z-index: -1;
@@ -97,12 +101,12 @@
 		max-inline-size: unset;
 		max-block-size: unset;
 	}
-	
+
 	.radialContainer {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		
+
 		.radialGradient {
 			position: absolute;
 			right: -30%;
@@ -115,17 +119,15 @@
 			transform: translateZ(0);
 			opacity: 20%;
 			background: var(--bar-gradient);
-			--bar-gradient: radial-gradient( 
-			circle, 
-			var(--hero-gradient-bg-1) 0%, 
-			var(--hero-gradient-bg-2) 24%, 
-			var(--hero-gradient-bg-3) 44%, 
-			var(--hero-gradient-bg-4) 57%, 
-			transparent 70% 
-			);
+			--bar-gradient: radial-gradient(circle,
+					var(--hero-gradient-bg-1) 0%,
+					var(--hero-gradient-bg-2) 24%,
+					var(--hero-gradient-bg-3) 44%,
+					var(--hero-gradient-bg-4) 57%,
+					transparent 70%);
 		}
 	}
-	
+
 	.barContainer {
 		position: absolute;
 		left: 0;
@@ -133,22 +135,20 @@
 		width: 100%;
 		height: 100px;
 	}
-	
-	.barGradient {	
-		--bar-opacity:0.15; 
-		--bar-blend-mode:screen;
-		--bar-gradient: linear-gradient( 
-		90deg, 
-		var(--hero-gradient-bg-1) 0%, 
-		var(--hero-gradient-bg-2) 26.88%, 
-		var(--hero-gradient-bg-3) 48.46%, 
-		var(--hero-gradient-bg-4) 74.51% 
-		);
-		
+
+	.barGradient {
+		--bar-opacity: 0.15;
+		--bar-blend-mode: screen;
+		--bar-gradient: linear-gradient(90deg,
+				var(--hero-gradient-bg-1) 0%,
+				var(--hero-gradient-bg-2) 26.88%,
+				var(--hero-gradient-bg-3) 48.46%,
+				var(--hero-gradient-bg-4) 74.51%);
+
 		opacity: var(--bar-opacity);
 		background-blend-mode: var(--bar-blend-mode);
 		background: var(--bar-gradient);
-		
+
 		position: absolute;
 		pointer-events: none;
 		-webkit-user-select: none;
