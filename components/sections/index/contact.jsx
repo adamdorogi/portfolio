@@ -22,12 +22,11 @@ export default function Contact() {
 
 	async function onSubmit(event) {
 		event.preventDefault();
+		const token = await recaptchaRef.current.executeAsync();
+		recaptchaRef.current.reset();
 		setIsLoading(true);
 
-		const token = await recaptchaRef.current.executeAsync();
-
 		try {
-
 			const response = await fetch('/api/emails', {
 				method: 'POST',
 				body: JSON.stringify({
@@ -68,7 +67,6 @@ export default function Contact() {
 					]}
 				/>
 				<form className={form.form} onSubmit={onSubmit}>
-					<ReCAPTCHA ref={recaptchaRef} sitekey='6LfyPUMqAAAAAMLMhuGT3DHI9muRf4pstsKtJOTS' />
 					<ul>
 						<li>
 							<input placeholder='Your name' type="text" id="name" name="name" required={true} />
@@ -78,6 +76,13 @@ export default function Contact() {
 						</li>
 						<li>
 							<textarea placeholder='Message' name="message" id="message" rows={8} required={true}></textarea>
+						</li>
+						<li>
+							<ReCAPTCHA
+								ref={recaptchaRef}
+								sitekey='6LdySEMqAAAAAI7Ro6n9EoYG7Re44h7cTFYvfXLu'
+								size='invisible' />
+							<p style={{ fontSize: '.875rem' }}>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
 						</li>
 						<li>
 							<span>

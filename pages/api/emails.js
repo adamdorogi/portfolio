@@ -1,3 +1,4 @@
+import axios from 'axios';
 import nodemailer from 'nodemailer';
 
 
@@ -18,7 +19,11 @@ export default async function handler(req, res) {
     try {
         const { name, email, message, token } = JSON.parse(req.body);
 
-        console.log("AAAAAA", token)
+        const recaptchaResult = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}&remoteip=${req.ip}`)
+
+        if (!recaptchaResult.data.success) {
+            throw Error('Invalid captcha')
+        }
 
         await transport.sendMail({
             to: process.env.GMAIL_EMAIL,
