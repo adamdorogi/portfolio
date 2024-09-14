@@ -16,6 +16,7 @@ const limiter = rateLimit({
 })
 
 export default async function handler(req, res) {
+    console.log("IP address:", req.ip)
     return limiter(req, res, async () => {
         if (req.method != 'POST') {
             res.status(405).json({ error: "Method not allowed" });
