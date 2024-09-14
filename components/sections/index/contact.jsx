@@ -7,8 +7,10 @@ import css from '../../../styles/sections/projects/featured.module.scss'
 
 import form from '../../../styles/sections/index/forms.module.scss';
 import button from '../../../styles/blocks/button.module.scss';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Badges from '../../utils/badge.list.util';
+
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 export default function Contact() {
@@ -16,9 +18,13 @@ export default function Contact() {
 	const [isSuccess, setIsSuccess] = useState(false)
 	const [didAttempt, setDidAttempt] = useState(false)
 
+	const recaptchaRef = useRef();
+
 	async function onSubmit(event) {
 		event.preventDefault();
 		setIsLoading(true);
+
+		const token = await recaptchaRef.current.executeAsync();
 
 		try {
 
@@ -27,7 +33,8 @@ export default function Contact() {
 				body: JSON.stringify({
 					name: event.target.name.value,
 					email: event.target.email.value,
-					message: event.target.message.value
+					message: event.target.message.value,
+					token
 				}),
 			});
 
@@ -61,6 +68,7 @@ export default function Contact() {
 					]}
 				/>
 				<form className={form.form} onSubmit={onSubmit}>
+					<ReCAPTCHA ref={recaptchaRef} sitekey='6LfyPUMqAAAAAMLMhuGT3DHI9muRf4pstsKtJOTS' />
 					<ul>
 						<li>
 							<input placeholder='Your name' type="text" id="name" name="name" required={true} />

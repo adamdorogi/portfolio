@@ -16,7 +16,9 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { name, email, message } = JSON.parse(req.body);
+        const { name, email, message, token } = JSON.parse(req.body);
+
+        console.log("AAAAAA", token)
 
         await transport.sendMail({
             to: process.env.GMAIL_EMAIL,
