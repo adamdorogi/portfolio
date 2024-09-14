@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer';
-import { rateLimit } from 'express-rate-limit'
 
 const transport = nodemailer.createTransport({
     service: 'gmail',
@@ -9,16 +8,7 @@ const transport = nodemailer.createTransport({
     },
 });
 
-const limiter = rateLimit({
-    windowMs: 1 * 60 * 1000,
-    limit: 100,
-})
-
 export default async function handler(req, res) {
-    limiter(req, res, () => {
-        return res.status(429).json({ error: 'Too Many Requests' });
-    })
-
     if (req.method != 'POST') {
         res.status(405).json({ error: "Method not allowed" });
         return;
