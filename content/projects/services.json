@@ -9,7 +9,7 @@
 			{
 				"key": "portfolio",
 				"hover": "left",
-				"alt": "Cryb website running on a MacBook Air",
+				"alt": "Cryb website design shown on a MacBook Air",
 				"h": "506",
 				"w": "556",
 				"url": "/img/services_mock_single.png"
@@ -53,6 +53,7 @@
 			{
 				"key": "mock-stack",
 				"hover": "left",
+				"alt": "Strongr app design shown on an iPhone",
 				"h": "1025",
 				"w": "556",
 				"url": "/img/services_mock_stack/01.png"
@@ -60,6 +61,7 @@
 			{
 				"key": "mock-stack",
 				"hover": "left",
+				"alt": "Shadow of iPhone showing Strongr app design",
 				"h": "1025",
 				"w": "556",
 				"url": "/img/services_mock_stack/02.png"
@@ -67,6 +69,7 @@
 			{
 				"key": "mock-stack",
 				"hover": "right",
+				"alt": "Strongr app design shown on an iPhone",
 				"h": "1025",
 				"w": "556",
 				"url": "/img/services_mock_stack/03.png"

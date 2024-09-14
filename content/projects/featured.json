@@ -27,7 +27,7 @@
 			{
 				"key": "mock-stack",
 				"hover": "right",
-				"alt": "iPhone shadow",
+				"alt": "Shadow of iPhone running IBM Security Verify app",
 				"h": "1200",
 				"w": "556",
 				"url": "/img/featured_mock_stack/02.png"
@@ -80,7 +80,7 @@
 			{
 				"key": "portfolio",
 				"hover": "left",
-				"alt": "Strongr app running on an iPhone",
+				"alt": "Strongr app design shown on an iPhone",
 				"h": "797",
 				"w": "556",
 				"url": "/img/featured_mock_single.png"

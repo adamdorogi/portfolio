@@ -58,13 +58,13 @@ export default function Service({ content }, index) {
 
 			<div className={css.imageContainer}>
 				<span className={`${css.imageAnimationContainer}`}>
-					{images.map(({ key, url, hover, h, w }, index) => {
+					{images.map(({ key, url, alt, hover, h, w }, index) => {
 						hover = (hover === 'left') ? hoverLeft : hoverRight
 						return (
 							<m.div key={`${index}-${key}`} variants={item}>
 								<m.div variants={hover}>
 									<span>
-										<Image src={url} alt="x" height={h} width={w} />
+										<Image src={url} alt={alt} height={h} width={w} />
 									</span>
 								</m.div>
 							</m.div>
