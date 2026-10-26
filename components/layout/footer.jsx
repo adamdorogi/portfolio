@@ -37,6 +37,9 @@ export default function Footer() {
 						</li>
 					</ul>
 				</section>
+				<p className={css.copyright}>
+					© {new Date().getFullYear()} Adam Dorogi-Kaposi. All rights reserved.
+				</p>
 			</Container>
 			<canvas id="gradient-canvas" className={''} data-transition-in ></canvas>
 		</footer>

@@ -59,6 +59,12 @@
 		}
 	}
 
+	.copyright {
+		margin: 0;
+		font-size: .75rem;
+		color: var(--primary-dim);
+	}
+
 	.socialList {
 		display: flex;
 		flex-direction: row;
